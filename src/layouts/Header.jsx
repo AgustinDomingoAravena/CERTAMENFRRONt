@@ -1,21 +1,24 @@
-import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 
-function Header() {
+const Header = () => {
   return (
-  <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            certamen
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  )
-}
+    <AppBar position="static" sx={{ backgroundColor: '#212121' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        
+       
+        <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+          Anillo Único
+        </Typography>
 
-export default Header
+        
+        <Typography variant="subtitle1" component="div" sx={{ fontStyle: 'italic' }}>
+          Uno para dominarlos a todos
+        </Typography>
+
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
